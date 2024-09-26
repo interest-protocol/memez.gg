@@ -1,13 +1,29 @@
-import { H1 } from '@stylin.js/elements';
+import { Motion } from '@interest-protocol/ui-kit';
+import { Img } from '@stylin.js/elements';
 import { FC } from 'react';
 
 import { Layout } from '@/components';
-import { LogoSVG } from '@/components/svg';
+import Shadow from '@/components/shadow';
 
 const Home: FC = () => (
   <Layout>
-    <H1>Home</H1>
-    <LogoSVG maxHeight="3rem" maxWidth="3rem" width="100%" />
+    <Motion
+      initial={{ scale: 1 }}
+      animate={{ scale: 1.1 }}
+      transition={{ repeat: Infinity, repeatType: 'reverse' }}
+    >
+      <Img src="/logo.webp" />
+    </Motion>
+    <Motion
+      top="-40%"
+      right="0%"
+      position="absolute"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: [1, 0.5, 1] }}
+      transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+    >
+      <Shadow />
+    </Motion>
   </Layout>
 );
 
