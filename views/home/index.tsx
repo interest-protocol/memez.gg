@@ -51,7 +51,7 @@ const Home: FC = () => {
       >
         <Img src="/logo.webp" />
       </Motion>
-      <Audio loop src="/gg.mp3" ref={audioRef} />
+      <Audio src="/gg.mp3" ref={audioRef} />
     </Layout>
   );
 };
