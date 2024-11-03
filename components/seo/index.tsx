@@ -4,14 +4,14 @@ import { FC } from 'react';
 const SEO: FC = () => (
   <Head>
     <title>MEMEZ.GG</title>
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@memezdotgg" />
-    <meta name="twitter:title" content="MEMEZ.GG" />
-    <meta name="twitter:description" content="Good Game" />
-    <meta name="twitter:image" content="/memezbanner.png" />
-    <meta name="og:title" content="MEMEZ.GG" />
-    <meta name="og:description" content="Good Game" />
-    <meta name="og:image" content="/memezbanner.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@memezdotgg" />
+    <meta property="twitter:title" content="MEMEZ.GG" />
+    <meta property="twitter:description" content="Good Game" />
+    <meta property="twitter:image" content="/memezbanner.png" />
+    <meta property="og:title" content="MEMEZ.GG" />
+    <meta property="og:description" content="Good game" />
+    <meta property="og:image" content="/memezbanner.png" />
     <link rel="icon" type="image/x-icon" href="/icon.webp" />
   </Head>
 );
