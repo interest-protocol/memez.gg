@@ -7,6 +7,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
     display="flex"
     height="100vh"
     alignItems="center"
+    position="relative"
     justifyContent="center"
   >
     {children}
