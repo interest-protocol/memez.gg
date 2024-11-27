@@ -54,7 +54,7 @@ const Home: FC = () => {
       >
         <Img src="/logo.webp" />
       </Motion>
-      <Box gap="xs" top="2rem" right="2rem" display="flex" position="absolute">
+      <Box gap="xs" mx="auto" bottom="2rem" display="flex" position="absolute">
         {SOCIAL_LINK.map(({ title, pathname, Icon }) => (
           <Link
             key={v4()}
@@ -63,16 +63,7 @@ const Home: FC = () => {
             rel="noreferrer"
             title={`Follow us on ${title}`}
           >
-            <Box
-              p="m"
-              color="#fff"
-              width="2.5rem"
-              height="2.5rem"
-              border="1px solid"
-              borderRadius="full"
-              borderColor="outlineVariant"
-              nHover={{ borderColor: 'outline', scale: 1.1 }}
-            >
+            <Box color="#fff" width="2.5rem" height="2.5rem">
               <Icon maxHeight="100%" maxWidth="100%" width="100%" />
             </Box>
           </Link>
