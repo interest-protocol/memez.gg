@@ -8,6 +8,8 @@ import { Layout } from '@/components';
 import Shadow from '@/components/shadow';
 import { SOCIAL_LINK } from '@/constants/socials';
 
+import SecretField from './secret-fields';
+
 const Home: FC = () => {
   const audioRef = useRef<AudioElementProps>(null);
   const [firstPlay, setFirstPlay] = useState(true);
@@ -46,14 +48,23 @@ const Home: FC = () => {
       >
         <Shadow />
       </Motion>
-      <Motion
-        onClick={toggleSound}
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.1 }}
-        transition={{ repeat: Infinity, repeatType: 'reverse' }}
+      <Box
+        gap="1rem"
+        display="flex"
+        alignItems="center"
+        position="relative"
+        flexDirection="column"
       >
-        <Img src="/logo.webp" />
-      </Motion>
+        <Motion
+          onClick={toggleSound}
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.1 }}
+          transition={{ repeat: Infinity, repeatType: 'reverse' }}
+        >
+          <Img src="/logo.webp" />
+        </Motion>
+        <SecretField />
+      </Box>
       <Box gap="xs" mx="auto" bottom="2rem" display="flex" position="absolute">
         {SOCIAL_LINK.map(({ title, pathname, Icon }) => (
           <Link
