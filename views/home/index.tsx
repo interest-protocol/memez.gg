@@ -1,86 +1,85 @@
-import { Box, Motion } from '@interest-protocol/ui-kit';
-import { Audio, AudioElementProps, Img } from '@stylin.js/elements';
-import Link from 'next/link';
-import { FC, useEffect, useRef, useState } from 'react';
-import { v4 } from 'uuid';
+import { Button, Div, P } from '@stylin.js/elements';
+import { FC } from 'react';
 
 import { Layout } from '@/components';
-import Shadow from '@/components/shadow';
-import { SOCIAL_LINK } from '@/constants/socials';
-
-import SecretField from './secret-fields';
+import { MemezLogoSVG, SparklessSVG, TokenAmountSVG } from '@/components/svg';
 
 const Home: FC = () => {
-  const audioRef = useRef<AudioElementProps>(null);
-  const [firstPlay, setFirstPlay] = useState(true);
-
-  const playSound = () => {
-    const element = audioRef.current as HTMLAudioElement;
-    if (element && element.paused && firstPlay) {
-      setFirstPlay(false);
-      element.play();
-    }
-  };
-
-  const toggleSound = () => {
-    const element = audioRef.current as HTMLAudioElement;
-    if (element) {
-      if (element.paused) element.play();
-      else element.pause();
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', playSound);
-    return () => window.removeEventListener('mousemove', playSound);
-  }, []);
-
   return (
     <Layout>
-      <Motion
-        zIndex="0"
-        top="-40%"
-        right="0%"
-        position="absolute"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: [1, 0.5, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <Shadow />
-      </Motion>
-      <Box
-        gap="1rem"
-        display="flex"
-        alignItems="center"
-        position="relative"
-        flexDirection="column"
-      >
-        <Motion
-          onClick={toggleSound}
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.1 }}
-          transition={{ repeat: Infinity, repeatType: 'reverse' }}
+      <Div display="flex" justifyContent="center" flexDirection="column">
+        <Div
+          width="15rem"
+          display="flex"
+          cursor="pointer"
+          alignItems="center"
+          justifyContent="center"
         >
-          <Img src="/logo.webp" />
-        </Motion>
-        <SecretField />
-      </Box>
-      <Box gap="xs" mx="auto" bottom="2rem" display="flex" position="absolute">
-        {SOCIAL_LINK.map(({ title, pathname, Icon }) => (
-          <Link
-            key={v4()}
-            href={pathname}
-            target="_blank"
-            rel="noreferrer"
-            title={`Follow us on ${title}`}
+          <MemezLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
+        </Div>
+      </Div>
+      <Div
+        p="3rem"
+        width="60rem"
+        display="flex"
+        borderRadius="1rem"
+        justifyContent="space-between"
+      >
+        <Div flex="1">
+          <img src="/coins.webp" alt="Coins" width="250rem" />
+        </Div>
+        <Div
+          flex="1"
+          display="flex"
+          alignItems="center"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <Div mb="0.8rem">
+            <TokenAmountSVG maxHeight="5rem" maxWidth="5rem" width="5rem" />
+          </Div>
+          <Div pb="1rem" textAlign="center">
+            <P mb="0.5rem" color="#fff" fontSize="1rem">
+              Coin Wonderland
+            </P>
+            <P
+              fontWeight="400"
+              fontSize="0.9rem"
+              lineHeight="1.5rem"
+              color="#f8f8f8b2"
+            >
+              Welcome to the land of coins endless possibilities—your one-stop
+              shop to explore, trade, discover, create and edit coins.
+            </P>
+          </Div>
+          <Button
+            px="1.5rem"
+            py="0.8rem"
+            gap="0.8rem"
+            bg="#1f1f1f71"
+            display="flex"
+            cursor="pointer"
+            transition="0.3s"
+            color="#F5B722"
+            border="1px solid"
+            alignItems="center"
+            borderRadius="4rem"
+            borderColor="#f5b62230"
+            nHover={{
+              borderColor: '#f5b6226e',
+            }}
           >
-            <Box color="#fff" width="2.5rem" height="2.5rem">
-              <Icon maxHeight="100%" maxWidth="100%" width="100%" />
-            </Box>
-          </Link>
-        ))}
-      </Box>
-      <Audio src="/gg.mp3" ref={audioRef} />
+            Launch App
+            <Div>
+              <SparklessSVG
+                maxWidth="1.5rem"
+                maxHeight="1.5rem"
+                width="1.5rem"
+              />
+            </Div>
+          </Button>
+        </Div>
+      </Div>
     </Layout>
   );
 };
