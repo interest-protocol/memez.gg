@@ -1,18 +1,21 @@
-import { Button, Div, P } from '@stylin.js/elements';
+import { Div, P } from '@stylin.js/elements';
 import { FC } from 'react';
 
 import { Layout } from '@/components';
-import { MemezLogoSVG, SparklessSVG, TokenAmountSVG } from '@/components/svg';
+import LaunchButton from '@/components/launch-button';
+import { MemezLogoSVG, MemezPartySVG } from '@/components/svg';
+
+import LaunchAppCard from './components/launch-app-card';
+import { CARDS } from './components/launch-app-card/launch-app-card.data';
 
 const Home: FC = () => {
   return (
     <Layout>
       <Div
-        width="60rem"
         display="flex"
         flexDirection="column"
-        border="1px solid red"
         justifyContent="center"
+        width={['95%', '95%', '95%', '60rem', '60rem']}
       >
         <Div display="flex" justifyContent="center" flexDirection="column">
           <Div
@@ -23,68 +26,83 @@ const Home: FC = () => {
           >
             <MemezLogoSVG maxHeight="15rem" maxWidth="15rem" width="15rem" />
           </Div>
-        </Div>
-        <Div
-          p="2rem"
-          mb="1rem"
-          display="flex"
-          borderRadius="1rem"
-          justifyContent="space-between"
-          border="1px solid red"
-        >
-          <Div flex="1">
-            <img src="/coins.webp" alt="Coins" width="250rem" />
+          <Div
+            p="2rem"
+            mb="1rem"
+            display="flex"
+            border="1px solid"
+            borderRadius="2rem"
+            borderColor="#f5b62230"
+            justifyContent={[
+              'center',
+              'center',
+              'center',
+              'space-between',
+              'space-between',
+            ]}
+            flexDirection={['column', 'column', 'column', 'row', 'row']}
+          >
+            <Div textAlign="center" flex="1">
+              <img src="/coins.webp" alt="Coins" width="250rem" />
+            </Div>
+            <Div
+              flex="1"
+              display="flex"
+              alignItems="center"
+              flexDirection="column"
+              justifyContent="center"
+            >
+              <Div
+                width="100%"
+                display="flex"
+                justifyContent={[
+                  'flex-start',
+                  'flex-start',
+                  'flex-start',
+                  'center',
+                  'center',
+                ]}
+                mb="0.8rem"
+              >
+                <MemezPartySVG maxHeight="5rem" maxWidth="5rem" width="5rem" />
+              </Div>
+              <Div textAlign={['left', 'left', 'left', 'center', 'center']}>
+                <P mb="0.5rem" color="#fff" fontSize="1rem">
+                  Pump It Up: Ride the Crypto Wave!
+                </P>
+                <P
+                  mb="1.1rem"
+                  fontWeight="400"
+                  fontSize="0.9rem"
+                  lineHeight="1.5rem"
+                  color="#f8f8f8b2"
+                >
+                  Seize your opportunities. Whether you&apos;re tracking
+                  explosive surges, rallying behind your favorite tokens, or
+                  simply enjoying the thrill of the ride, this is where the
+                  excitement truly takes off.
+                </P>
+                <LaunchButton />
+              </Div>
+            </Div>
           </Div>
           <Div
-            flex="1"
+            gap="1rem"
+            color="#fff"
             display="flex"
-            alignItems="center"
-            flexDirection="column"
-            justifyContent="center"
+            flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
-            <Div mb="0.8rem">
-              <TokenAmountSVG maxHeight="5rem" maxWidth="5rem" width="5rem" />
-            </Div>
-            <Div pb="1rem" textAlign="center">
-              <P mb="0.5rem" color="#fff" fontSize="1rem">
-                Coin Wonderland
-              </P>
-              <P
-                fontWeight="400"
-                fontSize="0.9rem"
-                lineHeight="1.5rem"
-                color="#f8f8f8b2"
-              >
-                Welcome to the land of coins endless possibilities—your one-stop
-                shop to explore, trade, discover, create and edit coins.
-              </P>
-            </Div>
-            <Button
-              px="1.5rem"
-              py="0.8rem"
-              gap="0.8rem"
-              bg="#1f1f1f71"
-              display="flex"
-              cursor="pointer"
-              transition="0.3s"
-              color="#F5B722"
-              border="1px solid"
-              alignItems="center"
-              borderRadius="4rem"
-              borderColor="#f5b62230"
-              nHover={{
-                borderColor: '#f5b6226e',
-              }}
-            >
-              Launch App
-              <Div>
-                <SparklessSVG
-                  maxWidth="1.5rem"
-                  maxHeight="1.5rem"
-                  width="1.5rem"
+            {CARDS.map(
+              ({ imgSrc, title, description, isCommingSoon }, index) => (
+                <LaunchAppCard
+                  key={index}
+                  title={title}
+                  imgSrc={imgSrc}
+                  description={description}
+                  isCommingSoon={isCommingSoon}
                 />
-              </Div>
-            </Button>
+              )
+            )}
           </Div>
         </Div>
       </Div>

@@ -4,6 +4,7 @@ export { default as GithubSVG } from './github';
 export { default as IPXLogoSVG } from './ipx-logo';
 export { default as LogoSVG } from './logo';
 export { default as MemezLogoSVG } from './memez-logo';
+export { default as MemezPartySVG } from './memez-party';
 export { default as MenuSVG } from './menu';
 export { default as SparklessSVG } from './sparkless';
 export { default as Telegram } from './telegram';

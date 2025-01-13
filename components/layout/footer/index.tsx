@@ -8,17 +8,16 @@ import { SOCIAL } from '@/constants/socials';
 const FooterBar: FC = () => {
   return (
     <Footer
-      pt="2rem"
+      py="2rem"
       width="100%"
-      bg="#0E1218"
       display="flex"
       alignItems="center"
       justifyContent="space-between"
       flexDirection={['column', 'column', 'column', 'row']}
     >
       <Div
-        cursor="pointer"
         color="#fff"
+        cursor="pointer"
         nHover={{
           opacity: '0.8',
         }}

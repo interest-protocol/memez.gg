@@ -14,7 +14,6 @@ const MenuList: FC = () => {
           listStyle="none"
           color="#9b9ca1"
           fontSize="0.9rem"
-          fontFamily="Satoshi"
           nHover={{ opacity: '.8' }}
           transition="all 300ms ease-in-out"
         >

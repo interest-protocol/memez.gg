@@ -24,8 +24,8 @@ const Header = () => {
 
   return (
     <Box
-      py="1.5rem"
       px="2rem"
+      py="1.5rem"
       display="flex"
       alignItems="center"
       width="fill-available"
