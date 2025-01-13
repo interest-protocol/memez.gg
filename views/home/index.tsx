@@ -13,11 +13,37 @@ const Home: FC = () => {
     <Layout>
       <Div
         display="flex"
+        position="relative"
         flexDirection="column"
         justifyContent="center"
+        backgroundImage="/Nirvana.webp"
         width={['95%', '95%', '95%', '60rem', '60rem']}
       >
-        <Div display="flex" justifyContent="center" flexDirection="column">
+        <Div
+          top="0"
+          left="0"
+          right="0"
+          zIndex="1"
+          width="100%"
+          position="absolute"
+          justifyContent="center"
+          display={['none', 'none', 'none', 'inline-flex', 'inline-flex']}
+        >
+          <img
+            src="/Nirvana.webp"
+            alt="Nirvana"
+            width="700rem"
+            style={{
+              filter: 'blur(3px)',
+            }}
+          />
+        </Div>
+        <Div
+          zIndex="2"
+          display="flex"
+          justifyContent="center"
+          flexDirection="column"
+        >
           <Div
             display="flex"
             cursor="pointer"
@@ -66,7 +92,17 @@ const Home: FC = () => {
               >
                 <MemezPartySVG maxHeight="5rem" maxWidth="5rem" width="5rem" />
               </Div>
-              <Div textAlign={['left', 'left', 'left', 'center', 'center']}>
+              <Div
+                display="flex"
+                flexDirection="column"
+                alignItems={[
+                  'flex-start',
+                  'flex-start',
+                  'center',
+                  'center',
+                  'center',
+                ]}
+              >
                 <P mb="0.5rem" color="#fff" fontSize="1rem">
                   Pump It Up: Ride the Crypto Wave!
                 </P>
