@@ -15,9 +15,11 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
     <Div
       p="1rem"
       flex="1"
+      bg="#3c3c3c55"
       border="1px solid"
       borderRadius="2rem"
       borderColor="#f5b62230"
+      backdropFilter="blur(19px)"
     >
       <Div mb="1rem" flex="1">
         <img src={imgSrc} alt="OTC" width="100%" />
@@ -32,7 +34,6 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
           {title}
         </Span>
       </Div>
-      {/* eslint-disable-next-line react/no-unescaped-entities */}
       <P mb="1rem" color="#9b9ca1" fontSize="0.9rem" lineHeight="1.5rem">
         {description}
       </P>

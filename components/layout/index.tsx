@@ -1,5 +1,4 @@
-import { Box } from '@interest-protocol/ui-kit';
-import { Main } from '@stylin.js/elements';
+import { Div, Main } from '@stylin.js/elements';
 import { FC, PropsWithChildren } from 'react';
 
 import FooterBar from './footer';
@@ -7,7 +6,7 @@ import Header from './header';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main bg="#131313" display="flex" justifyContent="center">
-    <Box
+    <Div
       width="100%"
       display="flex"
       maxWidth="1250px"
@@ -18,7 +17,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       <Header />
       {children}
       <FooterBar />
-    </Box>
+    </Div>
   </Main>
 );
 

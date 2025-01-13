@@ -1,5 +1,4 @@
-import { Box } from '@interest-protocol/ui-kit';
-import { Button, Nav } from '@stylin.js/elements';
+import { Button, Div, Nav } from '@stylin.js/elements';
 import { useEffect, useState } from 'react';
 
 import { MemezLogoSVG, MenuSVG, TimesSVG } from '@/components/svg';
@@ -23,7 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <Box
+    <Div
       px="2rem"
       py="1.5rem"
       display="flex"
@@ -31,7 +30,7 @@ const Header = () => {
       width="fill-available"
       justifyContent="space-between"
     >
-      <Box
+      <Div
         width="5rem"
         display="flex"
         cursor="pointer"
@@ -39,13 +38,13 @@ const Header = () => {
         justifyContent="center"
       >
         <MemezLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
-      </Box>
+      </Div>
       <Nav>
-        <Box display={['none', 'none', 'none', 'flex', 'flex']}>
+        <Div display={['none', 'none', 'none', 'flex', 'flex']}>
           <MenuList />
-        </Box>
+        </Div>
       </Nav>
-      <Box display="flex" alignItems="center" gap="0.8rem">
+      <Div display="flex" alignItems="center" gap="0.8rem">
         <Button
           py="1rem"
           px="1.5rem"
@@ -76,8 +75,8 @@ const Header = () => {
             <MenuSVG maxHeight="4rem" maxWidth="2rem" width="100%" />
           )}
         </Button>
-      </Box>
-    </Box>
+      </Div>
+    </Div>
   );
 };
 

@@ -34,7 +34,7 @@ const Home: FC = () => {
             alt="Nirvana"
             width="700rem"
             style={{
-              filter: 'blur(3px)',
+              filter: 'blur(5px)',
             }}
           />
         </Div>
@@ -56,9 +56,11 @@ const Home: FC = () => {
             p="2rem"
             mb="1rem"
             display="flex"
+            bg="#3c3c3c55"
             border="1px solid"
             borderRadius="2rem"
             borderColor="#f5b62230"
+            backdropFilter="blur(19px)"
             justifyContent={[
               'center',
               'center',
@@ -69,7 +71,7 @@ const Home: FC = () => {
             flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
             <Div textAlign="center" flex="1">
-              <img src="/coins.webp" alt="Coins" width="250rem" />
+              <img src="/coins-circle.png" alt="Coins" width="350rem" />
             </Div>
             <Div
               flex="1"
