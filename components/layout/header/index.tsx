@@ -1,27 +1,14 @@
 import { Button, Div, Li, Nav, Ul } from '@stylin.js/elements';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 import { MemezLogoSVG, MenuSVG, TimesSVG } from '@/components/svg';
+import { useMenuProvider } from '@/context';
 
 import MenuList from './menu-list';
 import { MENU_ITEMS } from './menu-list/menu.data';
 
 const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(min-width: 1024px)');
-    const handleResize = (e: MediaQueryListEvent) => {
-      if (e.matches) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    mediaQuery.addEventListener('change', handleResize);
-
-    return () => mediaQuery.removeEventListener('change', handleResize);
-  }, []);
+  const { isMenuOpen, handleMenuOpen } = useMenuProvider();
 
   return (
     <Div
@@ -63,6 +50,7 @@ const Header = () => {
             border="1px solid"
             borderRadius="4rem"
             borderColor="#f5b7227f"
+            borderBottom="#1f1f1f"
             nHover={{
               borderColor: '#f5b62240',
             }}
@@ -74,7 +62,7 @@ const Header = () => {
             border="none"
             cursor="pointer"
             color="#f5b7227f"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={handleMenuOpen}
             display={['flex', 'flex', 'flex', 'none', 'none']}
           >
             {isMenuOpen ? (
