@@ -1,4 +1,4 @@
-import { Div, Footer } from '@stylin.js/elements';
+import { A, Div, Footer } from '@stylin.js/elements';
 import Link from 'next/link';
 import { FC } from 'react';
 
@@ -15,15 +15,17 @@ const FooterBar: FC = () => {
       justifyContent="space-between"
       flexDirection={['column', 'column', 'column', 'row']}
     >
-      <Div
+      <A
         color="#fff"
+        target="blank"
         cursor="pointer"
         nHover={{
-          opacity: '0.8',
+          color: '#0053db',
         }}
+        href="https://www.interestprotocol.com/"
       >
         <IPXLogoSVG maxHeight="2.5rem" maxWidth="2.5rem" height="2.5rem" />
-      </Div>
+      </A>
       <Div display="flex" justifyContent="center" alignItems="center">
         {SOCIAL.map(({ title, Icon, link }) => {
           return (

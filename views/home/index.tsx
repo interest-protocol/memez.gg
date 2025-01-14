@@ -16,11 +16,10 @@ const Home: FC = () => {
         position="relative"
         flexDirection="column"
         justifyContent="center"
-        backgroundImage="/Nirvana.webp"
         width={['95%', '95%', '95%', '60rem', '60rem']}
       >
         <Div
-          top="0"
+          top="7rem"
           left="0"
           right="0"
           zIndex="1"
