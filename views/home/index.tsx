@@ -53,7 +53,7 @@ const Home: FC = () => {
             <MemezLogoSVG maxHeight="15rem" maxWidth="15rem" width="15rem" />
           </Div>
           <Div
-            p="2rem"
+            p="1rem"
             mb="1rem"
             display="flex"
             bg="#3c3c3c55"
@@ -71,7 +71,7 @@ const Home: FC = () => {
             flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
             <Div textAlign="center" flex="1">
-              <img src="/coins-circle.png" alt="Coins" width="350rem" />
+              <img src="/coins-circle.png" alt="Coins" width="100%" />
             </Div>
             <Div
               flex="1"
@@ -120,7 +120,18 @@ const Home: FC = () => {
                   simply enjoying the thrill of the ride, this is where the
                   excitement truly takes off.
                 </P>
-                <LaunchButton />
+                <Div
+                  display="flex"
+                  width="100%"
+                  justifyContent={[
+                    'flex-start',
+                    'flex-start',
+                    'flex-start',
+                    'center',
+                  ]}
+                >
+                  <LaunchButton />
+                </Div>
               </Div>
             </Div>
           </Div>

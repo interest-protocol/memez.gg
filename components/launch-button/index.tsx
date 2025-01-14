@@ -15,15 +15,15 @@ const LaunchButton: FC<LaunchButtonProps> = ({
     <Div>
       <Button
         gap="0.5rem"
-        bg="#1f1f1f71"
+        bg="rgba(245, 183, 34, 0.05)"
         display="flex"
         cursor="pointer"
         transition="0.3s"
         color="#F5B722"
         onClick={onClick}
         border="1px solid"
-        py={py ?? '0.8rem'}
-        px={px ?? '1.5rem'}
+        py={py ?? '0.5rem'}
+        px={px ?? '0.8rem'}
         borderRadius="4rem"
         alignItems="center"
         justifyContent="center"
