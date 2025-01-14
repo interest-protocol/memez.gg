@@ -11,8 +11,8 @@ const MenuList: FC = () => {
         <Li
           key={index}
           display="flex"
-          listStyle="none"
           color="#9b9ca1"
+          listStyle="none"
           fontSize="0.9rem"
           nHover={{ opacity: '.8' }}
           transition="all 300ms ease-in-out"

@@ -37,6 +37,7 @@ const Header = () => {
         alignItems="center"
         width="fill-available"
         justifyContent="space-between"
+        borderBottom={isMenuOpen ? '1px solid #fff' : '1px solid #0e1218'}
       >
         <Div
           width="5rem"
@@ -88,11 +89,11 @@ const Header = () => {
       {isMenuOpen && (
         <Div
           top="5rem"
+          bg="#131313"
           width="100%"
           zIndex={999}
-          bg="#F5B722"
-          display="flex"
           height="100%"
+          display="flex"
           position="absolute"
           alignItems="flex-start"
           justifyContent="flex-start"
@@ -101,17 +102,17 @@ const Header = () => {
             width="100%"
             display="flex"
             flexDirection="column"
-            justifyContent="flex-start"
             alignItems="flex-start"
+            justifyContent="flex-start"
           >
-            {MENU_ITEMS.map(({ name, url, Icon }, index) => (
+            {MENU_ITEMS.map(({ name, url }, index) => (
               <Li
                 key={index}
                 p="1rem"
                 width="100%"
                 display="flex"
+                color="#9b9ca1"
                 listStyle="none"
-                color="black"
                 fontSize="0.9rem"
                 justifyContent="space-between"
                 nHover={{
@@ -122,15 +123,6 @@ const Header = () => {
                 <Link href={url} style={{ textDecoration: 'none' }}>
                   {name}
                 </Link>
-                <Div
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  width="1.5rem"
-                  height="1.5rem"
-                >
-                  <Icon maxHeight="100%" maxWidth="100%" width="100%" />
-                </Div>
               </Li>
             ))}
           </Ul>
