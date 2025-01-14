@@ -4,15 +4,18 @@ import { FC } from 'react';
 import { Layout } from '@/components';
 import LaunchButton from '@/components/launch-button';
 import { MemezLogoSVG, MemezPartySVG } from '@/components/svg';
+import { useMenuProvider } from '@/context';
 
 import LaunchAppCard from './components/launch-app-card';
 import { CARDS } from './components/launch-app-card/launch-app-card.data';
 
 const Home: FC = () => {
+  const { isMenuOpen } = useMenuProvider();
+
   return (
     <Layout>
       <Div
-        display="flex"
+        display={isMenuOpen ? 'none' : 'flex'}
         position="relative"
         flexDirection="column"
         justifyContent="center"
@@ -47,6 +50,7 @@ const Home: FC = () => {
             display="flex"
             cursor="pointer"
             alignItems="center"
+            my="1rem"
             justifyContent="center"
           >
             <MemezLogoSVG maxHeight="15rem" maxWidth="15rem" width="15rem" />
