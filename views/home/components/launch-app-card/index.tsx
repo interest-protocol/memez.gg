@@ -13,13 +13,14 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
 }) => {
   return (
     <Div
-      p="1rem"
+      p="1.5rem"
       flex="1"
       bg="#3c3c3c55"
       border="1px solid"
       borderRadius="2rem"
       borderColor="#f5b62230"
       backdropFilter="blur(19px)"
+      width={['22rem', '30rem', '35rem', '100%', '100%']}
     >
       <Div mb="1rem" flex="1">
         <img src={imgSrc} alt="OTC" width="100%" />

@@ -4,18 +4,15 @@ import { FC } from 'react';
 import { Layout } from '@/components';
 import LaunchButton from '@/components/launch-button';
 import { MemezLogoSVG, MemezPartySVG } from '@/components/svg';
-import { useMenuProvider } from '@/context';
 
 import LaunchAppCard from './components/launch-app-card';
 import { CARDS } from './components/launch-app-card/launch-app-card.data';
 
 const Home: FC = () => {
-  const { isMenuOpen } = useMenuProvider();
-
   return (
     <Layout>
       <Div
-        display={isMenuOpen ? 'none' : 'flex'}
+        display="flex"
         position="relative"
         flexDirection="column"
         justifyContent="center"
@@ -41,8 +38,10 @@ const Home: FC = () => {
           />
         </Div>
         <Div
+          px="1rem"
           zIndex="2"
           display="flex"
+          alignItems="center"
           justifyContent="center"
           flexDirection="column"
         >
@@ -50,19 +49,18 @@ const Home: FC = () => {
             display="flex"
             cursor="pointer"
             alignItems="center"
-            my="1rem"
             justifyContent="center"
           >
             <MemezLogoSVG maxHeight="15rem" maxWidth="15rem" width="15rem" />
           </Div>
           <Div
-            p="1rem"
             mb="1rem"
+            p="1.5rem"
             display="flex"
             bg="#3c3c3c55"
             border="1px solid"
             borderRadius="2rem"
-            borderColor="#f5b62230"
+            borderColor="#FFFFFF04"
             backdropFilter="blur(19px)"
             justifyContent={[
               'center',
@@ -71,6 +69,7 @@ const Home: FC = () => {
               'space-between',
               'space-between',
             ]}
+            width={['22rem', '30rem', '35rem', '100%', '100%']}
             flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
             <Div textAlign="center" flex="1">

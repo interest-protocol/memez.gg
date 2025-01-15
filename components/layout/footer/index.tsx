@@ -13,6 +13,7 @@ const FooterBar: FC = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
+      px={['1rem', '1rem', '1rem', '1rem', 'unset']}
       flexDirection={['column', 'column', 'column', 'row']}
     >
       <A
