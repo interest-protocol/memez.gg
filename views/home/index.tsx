@@ -5,6 +5,7 @@ import { Layout } from '@/components';
 import LaunchButton from '@/components/launch-button';
 import { MemezLogoSVG, MemezPartySVG } from '@/components/svg';
 
+import CircleCoins from './components/circle-coins';
 import LaunchAppCard from './components/launch-app-card';
 import { CARDS } from './components/launch-app-card/launch-app-card.data';
 
@@ -72,8 +73,8 @@ const Home: FC = () => {
             width={['22rem', '30rem', '35rem', '100%', '100%']}
             flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
-            <Div textAlign="center" flex="1">
-              <img src="/coins-circle.png" alt="Coins" width="100%" />
+            <Div flex="1" position="relative" border="1px solid red">
+              <CircleCoins />
             </Div>
             <Div
               flex="1"
