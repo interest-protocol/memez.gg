@@ -1,55 +1,86 @@
 import { Div } from '@stylin.js/elements';
 import { motion } from 'framer-motion';
 
+import { SuiLogoSVG } from '@/components/svg';
+
 const CircleCoins = () => {
-  const radius = 7;
   const numDivs = 5;
+  const radius = 6;
 
   return (
     <Div
+      width="80%"
       height="20rem"
       display="flex"
       position="relative"
-      textAlign="center"
       alignItems="center"
-      border="1px solid blue"
       justifyContent="center"
     >
       <Div
-        width="3rem"
-        height="3rem"
+        p="0.5rem"
+        top="50%"
+        left="50%"
         borderRadius="50%"
         position="absolute"
-        border="1px solid red"
-      ></Div>
+        border="1px solid"
+        display="flex"
+        justifyContent="center"
+        borderColor="#FFFFFF1A"
+        transform="translate(-50%, -50%)"
+      >
+        <SuiLogoSVG maxHeight="3rem" maxWidth="3rem" width="3rem" />
+      </Div>
 
-      <Div position="relative" border="1px solid yellow">
+      <motion.div
+        style={{
+          top: '0',
+          left: '0',
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+        }}
+        animate={{
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 25,
+          ease: 'linear',
+          repeat: Infinity,
+        }}
+      >
         {[...Array(numDivs)].map((_, index) => {
           const angle = (index * 360) / numDivs;
+          const x = Math.cos((angle * Math.PI) / 180) * radius;
+          const y = Math.sin((angle * Math.PI) / 180) * radius;
+
           return (
-            <motion.div
+            <Div
               key={index}
               style={{
-                height: '3rem',
-                width: '3rem',
-                border: '1px solid green',
+                display: 'flex',
+                padding: '0.5rem',
                 borderRadius: '50%',
                 position: 'absolute',
-                transformOrigin: `${radius}rem center`,
-                transform: `rotate(${angle}deg) translateX(${radius}rem)`,
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderColor: '#FFFFFF1A',
+                border: '1px solid green',
+                top: `calc(50% + ${y}rem - 2rem)`,
+                left: `calc(50% + ${x}rem - 2.1rem)`,
               }}
-              animate={{
-                rotate: [angle, angle + 360],
-              }}
-              transition={{
-                duration: 5,
-                ease: 'linear',
-                repeat: Infinity,
-              }}
-            />
+            >
+              <SuiLogoSVG
+                style={{
+                  transform: 'rotate(360deg)', // Contrabalanceia a rotação
+                }}
+                maxHeight="3rem"
+                maxWidth="3rem"
+                width="3rem"
+              />
+            </Div>
           );
         })}
-      </Div>
+      </motion.div>
     </Div>
   );
 };

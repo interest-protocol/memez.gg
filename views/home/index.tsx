@@ -20,11 +20,10 @@ const Home: FC = () => {
         width={['95%', '95%', '95%', '60rem', '60rem']}
       >
         <Div
-          top="7rem"
+          top="3rem"
           left="0"
           right="0"
           zIndex="1"
-          width="100%"
           position="absolute"
           justifyContent="center"
           display={['none', 'none', 'none', 'inline-flex', 'inline-flex']}
@@ -34,7 +33,7 @@ const Home: FC = () => {
             alt="Nirvana"
             width="700rem"
             style={{
-              filter: 'blur(5px)',
+              filter: 'blur(12px)',
             }}
           />
         </Div>
@@ -47,8 +46,8 @@ const Home: FC = () => {
           flexDirection="column"
         >
           <Div
+            mb="1rem"
             display="flex"
-            cursor="pointer"
             alignItems="center"
             justifyContent="center"
           >
@@ -73,7 +72,15 @@ const Home: FC = () => {
             width={['22rem', '30rem', '35rem', '100%', '100%']}
             flexDirection={['column', 'column', 'column', 'row', 'row']}
           >
-            <Div flex="1" position="relative" border="1px solid red">
+            <Div
+              flex="1"
+              display="flex"
+              position="relative"
+              backgroundSize="cover"
+              justifyContent="center"
+              backgroundPosition="center"
+              backgroundImage="url('/circle-coins-background.webp')"
+            >
               <CircleCoins />
             </Div>
             <Div

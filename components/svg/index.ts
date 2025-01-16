@@ -9,6 +9,7 @@ export { default as MemezLogoSVG } from './memez-logo';
 export { default as MemezPartySVG } from './memez-party';
 export { default as MenuSVG } from './menu';
 export { default as SparklessSVG } from './sparkless';
+export { default as SuiLogoSVG } from './sui-logo';
 export { default as Telegram } from './telegram';
 export { default as TimesSVG } from './times';
 export { default as TokenAmountSVG } from './token-amount';
