@@ -122,8 +122,8 @@ const Home: FC = () => {
                   mb="1.1rem"
                   fontWeight="400"
                   fontSize="0.9rem"
-                  lineHeight="1.5rem"
                   color="#f8f8f8b2"
+                  lineHeight="1.5rem"
                 >
                   Seize your opportunities. Whether you&apos;re tracking
                   explosive surges, rallying behind your favorite tokens, or
