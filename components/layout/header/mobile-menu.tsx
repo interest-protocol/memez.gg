@@ -1,40 +1,20 @@
 import { Div, H2, Li } from '@stylin.js/elements';
 import { AnimatePresence, motion } from 'motion/react';
 import Link from 'next/link';
-import { FC, useEffect, useState } from 'react';
+import { FC } from 'react';
 import unikey from 'unikey';
 
 import { useMenuProvider } from '@/context';
 import useEventListener from '@/hooks/use-event-listener';
+import { useSafeHeight } from '@/hooks/use-safe-height';
 
 import { MENU_ITEMS } from './menu-list/menu.data';
 
 const Motion = motion(Div);
 
 const MobileMenu: FC = () => {
+  const safeHeight = useSafeHeight();
   const { isMenuOpen, handleMenuOpen } = useMenuProvider();
-
-  const [hasBottomToolbar, setHasBottomToolbar] = useState(false);
-
-  const detectBottomToolbar = () => {
-    const isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
-    const hasToolbar = window.innerHeight < screen.height;
-
-    if (isMobile && hasToolbar) {
-      setHasBottomToolbar(true);
-    } else {
-      setHasBottomToolbar(false);
-    }
-  };
-
-  useEffect(() => {
-    detectBottomToolbar();
-    window.addEventListener('resize', detectBottomToolbar);
-    return () => window.removeEventListener('resize', detectBottomToolbar);
-  }, []);
 
   useEventListener(
     'keydown',
@@ -60,7 +40,7 @@ const MobileMenu: FC = () => {
           backdropFilter="blur(10px)"
           animate={{ opacity: [0, 1] }}
           transition={{ duration: 0.5 }}
-          pb="env(safe-area-inset-bottom)"
+          pb={`calc(100vh - ${safeHeight}px)`}
           display={['flex', 'none', 'none', 'none', 'none']}
         >
           <Motion
@@ -74,8 +54,7 @@ const MobileMenu: FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Motion
-              px="1.5rem"
-              pt="1.5rem"
+              p="1.5rem"
               gap="1.5rem"
               display="flex"
               bg="#3C3C3C80"
@@ -89,7 +68,6 @@ const MobileMenu: FC = () => {
                 '1.125rem 1.125rem 0 0',
                 '1.125rem',
               ]}
-              {...{ pb: hasBottomToolbar ? '9.5rem' : '1.5rem' }}
             >
               <Div
                 mx="auto"
