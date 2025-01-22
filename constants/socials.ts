@@ -1,6 +1,7 @@
 import { FC, SVGAttributes } from 'react';
 
-import { XSVG } from '@/components/svg';
+import { SocialProps } from '@/components/layout/footer/footer.types';
+import { DiscordSVG, GithubSVG, Telegram, XSVG } from '@/components/svg';
 
 export interface SVGProps extends SVGAttributes<SVGSVGElement> {
   maxHeight: string;
@@ -13,10 +14,25 @@ export type SocialLinkProps = {
   Icon: FC<SVGProps>;
 };
 
-export const SOCIAL_LINK: ReadonlyArray<SocialLinkProps> = [
+export const SOCIAL: SocialProps[] = [
   {
     title: 'X',
-    pathname: 'https://x.com/memezdotgg',
     Icon: XSVG,
+    link: '',
+  },
+  {
+    title: 'Discord',
+    Icon: DiscordSVG,
+    link: '',
+  },
+  {
+    title: 'Github',
+    Icon: GithubSVG,
+    link: '',
+  },
+  {
+    title: 'Telegram',
+    Icon: Telegram,
+    link: '',
   },
 ];

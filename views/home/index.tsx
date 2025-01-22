@@ -1,86 +1,71 @@
-import { Box, Motion } from '@interest-protocol/ui-kit';
-import { Audio, AudioElementProps, Img } from '@stylin.js/elements';
-import Link from 'next/link';
-import { FC, useEffect, useRef, useState } from 'react';
-import { v4 } from 'uuid';
+import { Div } from '@stylin.js/elements';
+import { FC } from 'react';
+import unikey from 'unikey';
 
 import { Layout } from '@/components';
-import Shadow from '@/components/shadow';
-import { SOCIAL_LINK } from '@/constants/socials';
+import { MemezLogoSVG } from '@/components/svg';
 
-import SecretField from './secret-fields';
+import LaunchAppCard from './components/launch-app-card';
+import { CARDS } from './components/launch-app-card/launch-app-card.data';
+import PumpCard from './components/pump-card';
 
 const Home: FC = () => {
-  const audioRef = useRef<AudioElementProps>(null);
-  const [firstPlay, setFirstPlay] = useState(true);
-
-  const playSound = () => {
-    const element = audioRef.current as HTMLAudioElement;
-    if (element && element.paused && firstPlay) {
-      setFirstPlay(false);
-      element.play();
-    }
-  };
-
-  const toggleSound = () => {
-    const element = audioRef.current as HTMLAudioElement;
-    if (element) {
-      if (element.paused) element.play();
-      else element.pause();
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('mousemove', playSound);
-    return () => window.removeEventListener('mousemove', playSound);
-  }, []);
-
   return (
     <Layout>
-      <Motion
-        zIndex="0"
-        top="-40%"
-        right="0%"
-        position="absolute"
-        initial={{ opacity: 1 }}
-        animate={{ opacity: [1, 0.5, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-      >
-        <Shadow />
-      </Motion>
-      <Box
-        gap="1rem"
+      <Div
         display="flex"
-        alignItems="center"
         position="relative"
         flexDirection="column"
+        justifyContent="center"
+        width={['95%', '95%', '95%', '60rem', '60rem']}
       >
-        <Motion
-          onClick={toggleSound}
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.1 }}
-          transition={{ repeat: Infinity, repeatType: 'reverse' }}
+        <Div
+          top="3rem"
+          left="0"
+          right="0"
+          zIndex="1"
+          position="absolute"
+          justifyContent="center"
+          display={['none', 'none', 'none', 'inline-flex', 'inline-flex']}
         >
-          <Img src="/logo.webp" />
-        </Motion>
-        <SecretField />
-      </Box>
-      <Box gap="xs" mx="auto" bottom="2rem" display="flex" position="absolute">
-        {SOCIAL_LINK.map(({ title, pathname, Icon }) => (
-          <Link
-            key={v4()}
-            href={pathname}
-            target="_blank"
-            rel="noreferrer"
-            title={`Follow us on ${title}`}
+          <img
+            src="/Nirvana.webp"
+            alt="Nirvana"
+            width="700rem"
+            style={{
+              filter: 'blur(12px)',
+            }}
+          />
+        </Div>
+        <Div
+          px="1rem"
+          zIndex="2"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          flexDirection="column"
+        >
+          <Div
+            mb="1rem"
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
           >
-            <Box color="#fff" width="2.5rem" height="2.5rem">
-              <Icon maxHeight="100%" maxWidth="100%" width="100%" />
-            </Box>
-          </Link>
-        ))}
-      </Box>
-      <Audio src="/gg.mp3" ref={audioRef} />
+            <MemezLogoSVG maxHeight="15rem" maxWidth="15rem" width="15rem" />
+          </Div>
+          <PumpCard />
+          <Div
+            gap="1rem"
+            color="#fff"
+            display="flex"
+            flexDirection={['column', 'column', 'column', 'row', 'row']}
+          >
+            {CARDS.map((item) => (
+              <LaunchAppCard {...item} key={unikey()} />
+            ))}
+          </Div>
+        </Div>
+      </Div>
     </Layout>
   );
 };
