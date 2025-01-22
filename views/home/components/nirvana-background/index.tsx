@@ -6,7 +6,7 @@ const NirvanaBackground: FC = () => {
     <Div
       left="0"
       right="0"
-      top="5rem"
+      top="9rem"
       zIndex="1"
       position="fixed"
       justifyContent="center"

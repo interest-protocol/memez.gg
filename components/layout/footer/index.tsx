@@ -24,6 +24,7 @@ const FooterBar: FC = () => {
           color: '#0053db',
         }}
         href="https://www.interestprotocol.com/"
+        mb={['1rem', '1rem', '1rem', 'unset', 'unset']}
       >
         <IPXLogoSVG maxHeight="2.5rem" maxWidth="2.5rem" height="2.5rem" />
       </A>
