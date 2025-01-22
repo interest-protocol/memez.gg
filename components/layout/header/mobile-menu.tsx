@@ -76,8 +76,8 @@ const MobileMenu: FC = () => {
             <Motion
               px="1.5rem"
               pt="1.5rem"
-              display="flex"
               gap="1.5rem"
+              display="flex"
               bg="#3C3C3C80"
               textAlign="center"
               flexDirection="column"
@@ -89,7 +89,7 @@ const MobileMenu: FC = () => {
                 '1.125rem 1.125rem 0 0',
                 '1.125rem',
               ]}
-              {...{ pb: hasBottomToolbar ? '12rem' : '1.5rem' }}
+              {...{ pb: hasBottomToolbar ? '9.5rem' : '1.5rem' }}
             >
               <Div
                 mx="auto"
