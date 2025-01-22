@@ -89,7 +89,7 @@ const MobileMenu: FC = () => {
                 '1.125rem 1.125rem 0 0',
                 '1.125rem',
               ]}
-              {...{ pb: hasBottomToolbar ? '6rem' : '1.5rem' }}
+              {...{ pb: hasBottomToolbar ? '12rem' : '1.5rem' }}
             >
               <Div
                 mx="auto"
