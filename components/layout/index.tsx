@@ -6,14 +6,8 @@ import Header from './header';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main>
-    <Div
-      width="100%"
-      bg="#131313"
-      display="flex"
-      alignItems="center"
-      flexDirection="column"
-    >
-      <Div width="100%" bg="#00000033">
+    <Div width="100%" display="flex" alignItems="center" flexDirection="column">
+      <Div width="100%">
         <Header />
       </Div>
       <Div

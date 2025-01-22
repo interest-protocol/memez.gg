@@ -29,9 +29,9 @@ const Header: FC = () => {
         justifyContent="space-between"
       >
         <Div
-          width={['7.7rem']}
           display="flex"
           cursor="pointer"
+          width={['7.7rem']}
           alignItems="center"
           justifyContent="center"
         >

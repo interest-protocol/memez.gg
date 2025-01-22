@@ -1,11 +1,12 @@
 import { Div } from '@stylin.js/elements';
 import { motion } from 'framer-motion';
+import { FC } from 'react';
 
 import { SuiLogoSVG } from '@/components/svg';
 
 import { CIRCLE_COINS } from './circle-coins.data';
 
-const CircleCoins = () => {
+const CircleCoins: FC = () => {
   const numDivs = 6;
   const radius = 6;
 
@@ -30,6 +31,7 @@ const CircleCoins = () => {
         borderColor="#FFFFFF1A"
         justifyContent="center"
         transform="translate(-50%, -50%)"
+        boxShadow="inset 0 0 8px rgba(96, 96, 96, 0.5)"
       >
         <SuiLogoSVG maxHeight="3rem" maxWidth="3rem" width="3rem" />
       </Div>
@@ -59,6 +61,7 @@ const CircleCoins = () => {
             <motion.div
               key={index}
               style={{
+                opacity: '0.6',
                 display: 'flex',
                 padding: '0.5rem',
                 borderRadius: '50%',
@@ -69,6 +72,7 @@ const CircleCoins = () => {
                 borderColor: '#FFFFFF1A',
                 top: `calc(50% + ${y}rem - 2rem)`,
                 left: `calc(50% + ${x}rem - 2.1rem)`,
+                boxShadow: 'inset 0 0 8px rgba(96, 96, 96, 0.5)',
               }}
               animate={{ rotate: -360 }}
               transition={{

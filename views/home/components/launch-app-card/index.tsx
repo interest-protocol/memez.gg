@@ -20,7 +20,7 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
       bg="#3c3c3c55"
       border="1px solid"
       borderRadius="2rem"
-      borderColor="#f5b62230"
+      borderColor="#FFFFFF1A"
       backdropFilter="blur(19px)"
       width={['22rem', '30rem', '35rem', '100%', '100%']}
     >

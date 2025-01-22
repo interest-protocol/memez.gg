@@ -14,7 +14,7 @@ const PumpCard: FC = () => (
     bg="#3c3c3c55"
     border="1px solid"
     borderRadius="2rem"
-    borderColor="#FFFFFF04"
+    borderColor="#FFFFFF1A"
     backdropFilter="blur(19px)"
     justifyContent={[
       'center',

@@ -7,6 +7,7 @@ import { MemezLogoSVG } from '@/components/svg';
 
 import LaunchAppCard from './components/launch-app-card';
 import { CARDS } from './components/launch-app-card/launch-app-card.data';
+import NirvanaBackground from './components/nirvana-background';
 import PumpCard from './components/pump-card';
 
 const Home: FC = () => {
@@ -19,24 +20,7 @@ const Home: FC = () => {
         justifyContent="center"
         width={['95%', '95%', '95%', '60rem', '60rem']}
       >
-        <Div
-          top="3rem"
-          left="0"
-          right="0"
-          zIndex="1"
-          position="absolute"
-          justifyContent="center"
-          display={['none', 'none', 'none', 'inline-flex', 'inline-flex']}
-        >
-          <img
-            src="/Nirvana.webp"
-            alt="Nirvana"
-            width="700rem"
-            style={{
-              filter: 'blur(12px)',
-            }}
-          />
-        </Div>
+        <NirvanaBackground />
         <Div
           px="1rem"
           zIndex="2"
