@@ -13,7 +13,7 @@ const MenuList: FC = () => {
           display="flex"
           color="#9b9ca1"
           listStyle="none"
-          fontSize="0.9rem"
+          fontSize="1.1rem"
           nHover={{ opacity: '.8' }}
           transition="all 300ms ease-in-out"
         >

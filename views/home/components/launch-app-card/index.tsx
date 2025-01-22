@@ -6,8 +6,10 @@ import LaunchButton from '@/components/launch-button';
 import { LaunchAppCardProps } from './launch-app-card.types';
 
 const LaunchAppCard: FC<LaunchAppCardProps> = ({
+  url,
   title,
   imgSrc,
+  disabled,
   description,
   isCommingSoon,
 }) => {
@@ -39,9 +41,11 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
         {description}
       </P>
       <LaunchButton
+        url={url}
         px="1rem"
         py="0.7rem"
         iconSize="1.25rem"
+        disabled={disabled}
         isCommingSoon={isCommingSoon}
       />
     </Div>
