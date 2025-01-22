@@ -11,13 +11,13 @@ const MenuList: FC = () => {
         <Li
           key={index}
           display="flex"
-          color="#9b9ca1"
           listStyle="none"
+          color="#9b9ca1"
           fontSize="1.1rem"
           nHover={{ opacity: '.8' }}
           transition="all 300ms ease-in-out"
         >
-          <Link href={url} style={{ textDecoration: 'none' }}>
+          <Link target="_blank" href={url} style={{ textDecoration: 'none' }}>
             {name}
           </Link>
         </Li>
