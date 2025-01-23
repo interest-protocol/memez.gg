@@ -30,7 +30,12 @@ const PumpCardContent: FC = () => (
       display="flex"
       justifyContent={['flex-start', 'flex-start', 'flex-start', 'center']}
     >
-      <LaunchButton url="https://coins.memez.gg/" />
+      <LaunchButton
+        px="1.6rem"
+        py="0.7rem"
+        iconSize="1.1rem"
+        url="https://coins.memez.gg/"
+      />
     </Div>
   </Div>
 );
