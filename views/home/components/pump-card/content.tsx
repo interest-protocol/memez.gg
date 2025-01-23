@@ -15,10 +15,10 @@ const PumpCardContent: FC = () => (
     <P
       mb="1.1rem"
       fontWeight="400"
-      fontSize="0.9rem"
+      fontSize="0.8rem"
+      textAlign="center"
       color="#f8f8f8b2"
       lineHeight="1.5rem"
-      textAlign="justify"
     >
       Welcome to the MemeFi playground! Create coins, upgrade them, tweak their
       identity, or take control of the supply. Whether you’re here to build,
@@ -26,8 +26,8 @@ const PumpCardContent: FC = () => (
       remember, with great powers comes great reponsibility!
     </P>
     <Div
-      display="flex"
       width="100%"
+      display="flex"
       justifyContent={['flex-start', 'flex-start', 'flex-start', 'center']}
     >
       <LaunchButton url="https://coins.memez.gg/" />

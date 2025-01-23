@@ -45,6 +45,7 @@ const PumpCard: FC = () => (
       justifyContent="center"
     >
       <Div
+        mb="0.8rem"
         width="100%"
         display="flex"
         justifyContent={[
@@ -54,7 +55,6 @@ const PumpCard: FC = () => (
           'center',
           'center',
         ]}
-        mb="0.8rem"
       >
         <MemezPartySVG maxHeight="5rem" maxWidth="5rem" width="5rem" />
       </Div>

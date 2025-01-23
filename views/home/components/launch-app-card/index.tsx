@@ -30,7 +30,7 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
       <Div mb="0.7rem">
         <Span
           fontWeight="700"
-          fontSize="1.25rem"
+          fontSize="1rem"
           lineHeight="1.5rem"
           marginBottom="1rem"
         >
@@ -40,7 +40,7 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
       <P
         mb="1rem"
         color="#9b9ca1"
-        fontSize="0.9rem"
+        fontSize="0.8rem"
         lineHeight="1.5rem"
         textAlign="justify"
       >
