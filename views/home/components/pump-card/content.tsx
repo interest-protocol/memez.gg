@@ -10,7 +10,7 @@ const PumpCardContent: FC = () => (
     alignItems={['flex-start', 'flex-start', 'center', 'center', 'center']}
   >
     <P mb="0.5rem" color="#fff" fontSize="1rem">
-      Pump It Up: Ride the Crypto Wave!
+      Explorer: Coin Wonderland
     </P>
     <P
       mb="1.1rem"

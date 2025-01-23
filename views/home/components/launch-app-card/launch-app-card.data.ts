@@ -11,7 +11,7 @@ export const CARDS: Array<LaunchAppCardProps> = [
   },
   {
     imgSrc: '/Illustration.webp',
-    title: 'Coin Wonderland',
+    title: 'Pump It Up: Ride the Crypto Wave!',
     url: '#',
     disabled: true,
     description:
