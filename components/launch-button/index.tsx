@@ -19,26 +19,25 @@ const LaunchButton: FC<LaunchButtonProps> = ({
       <Link href={url}>
         <Button
           gap="0.5rem"
-          bg={
-            !disabled
-              ? 'rgba(245, 183, 34, 0.05)'
-              : 'hsla(42, 91.30%, 54.70%, 0.00)'
-          }
+          bg={!disabled ? '#282828B2' : 'hsla(42, 91.30%, 54.70%, 0.00)'}
           display="flex"
           cursor={!disabled ? 'pointer' : 'not-allowed'}
-          transition="0.3s"
+          transition="all 0.3s ease"
           disabled={disabled}
           color={!disabled ? '#F5B722' : '#ffffff69'}
           onClick={onClick}
-          border="1px solid"
+          border="none"
           py={py ?? '0.5rem'}
           px={px ?? '0.8rem'}
-          borderRadius="4rem"
+          borderRadius="10rem"
           alignItems="center"
           justifyContent="center"
+          boxShadow={!disabled ? '-20px -2px 16px 0px #F5B72212 inset' : 'none'}
+          background="linear-gradient(63deg, #1c1a1f, #F5B72212)"
           borderColor={!disabled ? '#f5b62230' : '#ffffff69'}
           nHover={{
-            borderColor: !disabled ? '#f5b6226e' : '#ffffff69',
+            borderColor: !disabled ? '#86621030' : '#ffffff69',
+            transform: 'scale(1.08)',
           }}
         >
           <P>{!isCommingSoon ? 'Launch App' : 'Comming soon'}</P>
