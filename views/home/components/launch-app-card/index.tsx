@@ -37,7 +37,13 @@ const LaunchAppCard: FC<LaunchAppCardProps> = ({
           {title}
         </Span>
       </Div>
-      <P mb="1rem" color="#9b9ca1" fontSize="0.9rem" lineHeight="1.5rem">
+      <P
+        mb="1rem"
+        color="#9b9ca1"
+        fontSize="0.9rem"
+        lineHeight="1.5rem"
+        textAlign="justify"
+      >
         {description}
       </P>
       <LaunchButton

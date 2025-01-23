@@ -18,10 +18,12 @@ const PumpCardContent: FC = () => (
       fontSize="0.9rem"
       color="#f8f8f8b2"
       lineHeight="1.5rem"
+      textAlign="justify"
     >
-      Seize your opportunities. Whether you&apos;re tracking explosive surges,
-      rallying behind your favorite tokens, or simply enjoying the thrill of the
-      ride, this is where the excitement truly takes off.
+      Welcome to the MemeFi playground! Create coins, upgrade them, tweak their
+      identity, or take control of the supply. Whether you’re here to build,
+      flex, or ride the hype, Memez gives you some seriously powerful tools—Just
+      remember, with great powers comes great reponsibility!
     </P>
     <Div
       display="flex"
