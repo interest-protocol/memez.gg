@@ -19,7 +19,7 @@ const LaunchButton: FC<LaunchButtonProps> = ({
       <Link href={url}>
         <Button
           gap="0.5rem"
-          bg={!disabled ? '#282828B2' : 'hsla(42, 91.30%, 54.70%, 0.00)'}
+          bg={!disabled ? '#282828B2' : '#f5b62200'}
           display="flex"
           cursor={!disabled ? 'pointer' : 'not-allowed'}
           transition="all 0.3s ease"
