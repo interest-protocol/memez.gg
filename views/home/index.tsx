@@ -30,7 +30,7 @@ const Home: FC = () => {
           flexDirection="column"
         >
           <Div
-            mb="1rem"
+            py="2rem"
             display="flex"
             alignItems="center"
             justifyContent="center"

@@ -30,8 +30,8 @@ const Header: FC = () => {
       >
         <Div
           display="flex"
+          width="7.7rem"
           cursor="pointer"
-          width={['7.7rem']}
           alignItems="center"
           justifyContent="center"
         >
