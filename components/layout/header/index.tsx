@@ -12,39 +12,41 @@ const Header: FC = () => {
   const { isMenuOpen } = useMenuProvider();
 
   return (
-    <Div
-      mx="auto"
-      width="100%"
-      display="flex"
-      maxWidth="1250px"
-      flexDirection="column"
-      overflow={isMenuOpen ? 'hidden' : 'auto'}
-    >
+    <Div width="100%" bg="#00000033">
       <Div
-        px="1rem"
-        py="1.5rem"
+        mx="auto"
+        width="100%"
         display="flex"
-        alignItems="center"
-        width="fill-available"
-        justifyContent="space-between"
+        maxWidth="1250px"
+        flexDirection="column"
+        overflow={isMenuOpen ? 'hidden' : 'auto'}
       >
         <Div
+          px="1rem"
+          py="1.5rem"
           display="flex"
-          cursor="pointer"
-          width={['7.7rem']}
           alignItems="center"
-          justifyContent="center"
+          width="fill-available"
+          justifyContent="space-between"
         >
-          <MemezLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
-        </Div>
-        <Nav display="flex" flexDirection="column">
-          <Div display={['none', 'flex', 'flex', 'flex', 'flex']}>
-            <MenuList />
+          <Div
+            display="flex"
+            cursor="pointer"
+            width={['7.7rem']}
+            alignItems="center"
+            justifyContent="center"
+          >
+            <MemezLogoSVG maxHeight="100%" maxWidth="100%" width="100%" />
           </Div>
-        </Nav>
-        <LaunchAppMenuButton />
+          <Nav display="flex" flexDirection="column">
+            <Div display={['none', 'flex', 'flex', 'flex', 'flex']}>
+              <MenuList />
+            </Div>
+          </Nav>
+          <LaunchAppMenuButton />
+        </Div>
+        <MobileMenu />
       </Div>
-      <MobileMenu />
     </Div>
   );
 };
