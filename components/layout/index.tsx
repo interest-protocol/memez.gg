@@ -6,7 +6,13 @@ import Header from './header';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main>
-    <Div width="100%" display="flex" alignItems="center" flexDirection="column">
+    <Div
+      width="100%"
+      display="flex"
+      gap="1rem "
+      alignItems="center"
+      flexDirection="column"
+    >
       <Header />
       <Div
         pt="2rem"
@@ -16,10 +22,11 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
         alignItems="center"
         flexDirection="column"
         justifyContent="center"
+        height={['100%', '100%', '100%', '75rem']}
       >
         {children}
-        <FooterBar />
       </Div>
+      <FooterBar />
     </Div>
   </Main>
 );

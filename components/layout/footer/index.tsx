@@ -13,7 +13,7 @@ const FooterBar: FC = () => {
       display="flex"
       alignItems="center"
       justifyContent="space-between"
-      px={['1rem', '1rem', '1rem', '1rem', 'unset']}
+      px={['1rem', '1rem', '1rem', '1rem', '22rem']}
     >
       <A
         color="#fff"
