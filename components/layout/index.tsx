@@ -7,22 +7,20 @@ import Header from './header';
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main>
     <Div
+      gap="1rem"
       width="100%"
       display="flex"
-      gap="1rem "
       alignItems="center"
       flexDirection="column"
     >
       <Header />
       <Div
-        pt="2rem"
         width="100%"
         display="flex"
         maxWidth="1250px"
         alignItems="center"
         flexDirection="column"
         justifyContent="center"
-        height={['100%', '100%', '100%', '75rem']}
       >
         {children}
       </Div>

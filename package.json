@@ -15,7 +15,7 @@
     "@interest-protocol/ui-kit": "0.2.26-alpha",
     "@mysten/dapp-kit": "^0.14.23",
     "@mysten/sui": "^1.11.0",
-    "@stylin.js/elements": "^1.0.3",
+    "@stylin.js/elements": "^1.1.0",
     "framer-motion": "^11.18.0",
     "motion": "^12.0.1",
     "next": "14.0.3",
