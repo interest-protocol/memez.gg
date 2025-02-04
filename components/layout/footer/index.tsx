@@ -32,20 +32,19 @@ const FooterBar: FC = () => (
       {SOCIAL.map(({ title, Icon, link }) => (
         <Link href={link} target="blank" key={title} title={title}>
           <Div
+            bg="#FFF"
             mr="0.5rem"
-            color="#FFF"
             width="2.5rem"
             display="flex"
             height="2.5rem"
+            color="#1A1A1A"
             cursor="pointer"
             borderRadius="50%"
-            border="1px solid"
             alignItems="center"
-            borderColor="#fff"
             justifyContent="center"
-            nHover={{
-              opacity: '0.8',
-            }}
+            backdropFilter="blur(19px)"
+            nHover={{ opacity: '0.8' }}
+            transition="opacity 300ms linear"
           >
             <Icon maxHeight="1.5rem" maxWidth="1.5rem" width="100%" />
           </Div>
