@@ -38,7 +38,7 @@ const LaunchApp: FC = () => {
             repeatType: 'loop',
           }}
         />
-        <Link href={'https://coins.memez.gg/'}>
+        <Link href="https://coins.memez.gg/">
           <Button
             all="unset"
             m="0.05rem"

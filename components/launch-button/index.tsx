@@ -40,7 +40,7 @@ const LaunchButton: FC<LaunchButtonProps> = ({
             transform: 'scale(1.08)',
           }}
         >
-          <P>{!isCommingSoon ? 'Launch App' : 'Comming soon'}</P>
+          <P>{!isCommingSoon ? 'Launch App' : 'Coming soon'}</P>
           {!isCommingSoon && (
             <Div mb="-0.3rem">
               <SparklessSVG
