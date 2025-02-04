@@ -36,11 +36,11 @@ const LaunchButton: FC<LaunchButtonProps> = ({
           background="linear-gradient(63deg, #1c1a1f, #F5B72212)"
           borderColor={!disabled ? '#f5b62230' : '#ffffff69'}
           nHover={{
+            transform: `scale(${isCommingSoon ? 1 : 1.08})`,
             borderColor: !disabled ? '#86621030' : '#ffffff69',
-            transform: 'scale(1.08)',
           }}
         >
-          <P>{!isCommingSoon ? 'Launch App' : 'Comming soon'}</P>
+          <P>{!isCommingSoon ? 'Launch App' : 'Coming soon'}</P>
           {!isCommingSoon && (
             <Div mb="-0.3rem">
               <SparklessSVG
