@@ -8,6 +8,7 @@ import { SOCIAL } from '@/constants/socials';
 const FooterBar: FC = () => (
   <Footer
     py="2rem"
+    zIndex="1"
     width="100%"
     display="flex"
     alignItems="center"
