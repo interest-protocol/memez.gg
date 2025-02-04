@@ -25,8 +25,8 @@ const Home: FC = () => (
         zIndex="2"
         display="flex"
         alignItems="center"
-        justifyContent="center"
         flexDirection="column"
+        justifyContent="center"
       >
         <Div
           py="2rem"
