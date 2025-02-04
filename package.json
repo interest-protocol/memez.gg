@@ -12,15 +12,20 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@interest-protocol/resui": "0.0.2-alpha",
-    "@interest-protocol/ui-kit": "0.3.1-beta",
+    "@interest-protocol/ui-kit": "0.2.26-alpha",
     "@mysten/dapp-kit": "^0.14.23",
     "@mysten/sui": "^1.11.0",
-    "@stylin.js/elements": "^1.0.3",
+    "@stylin.js/elements": "^1.1.0",
+    "framer-motion": "^11.18.0",
+    "motion": "^12.0.1",
     "next": "14.0.3",
     "prettier": "^3.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "uuid": "^11.0.3"
+    "react-hook-form": "^7.53.2",
+    "unikey": "^1.1.0",
+    "uuid": "^11.0.3",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.11.0",
