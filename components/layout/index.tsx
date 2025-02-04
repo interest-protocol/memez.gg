@@ -4,27 +4,27 @@ import { FC, PropsWithChildren } from 'react';
 import FooterBar from './footer';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
-  <Main>
+  <Main
+    gap="1rem"
+    width="100%"
+    display="flex"
+    minHeight="100vh"
+    alignItems="center"
+    flexDirection="column"
+    justifyContent="space-between"
+  >
     <Div
-      gap="1rem"
       width="100%"
       display="flex"
+      maxWidth="1250px"
       alignItems="center"
+      position="relative"
       flexDirection="column"
+      justifyContent="center"
     >
-      <Div
-        width="100%"
-        display="flex"
-        maxWidth="1250px"
-        alignItems="center"
-        position="relative"
-        flexDirection="column"
-        justifyContent="center"
-      >
-        {children}
-      </Div>
-      <FooterBar />
+      {children}
     </Div>
+    <FooterBar />
   </Main>
 );
 
