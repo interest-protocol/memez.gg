@@ -2,7 +2,6 @@ import { Div, Main } from '@stylin.js/elements';
 import { FC, PropsWithChildren } from 'react';
 
 import FooterBar from './footer';
-import Header from './header';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => (
   <Main>
@@ -13,12 +12,12 @@ const Layout: FC<PropsWithChildren> = ({ children }) => (
       alignItems="center"
       flexDirection="column"
     >
-      <Header />
       <Div
         width="100%"
         display="flex"
         maxWidth="1250px"
         alignItems="center"
+        position="relative"
         flexDirection="column"
         justifyContent="center"
       >

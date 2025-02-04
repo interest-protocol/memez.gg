@@ -37,7 +37,7 @@ const LaunchButton: FC<LaunchButtonProps> = ({
           borderColor={!disabled ? '#f5b62230' : '#ffffff69'}
           nHover={{
             borderColor: !disabled ? '#86621030' : '#ffffff69',
-            transform: 'scale(1.08)',
+            transform: isCommingSoon ? 'scale(1.08)' : 'scale(1)',
           }}
         >
           <P>{!isCommingSoon ? 'Launch App' : 'Coming soon'}</P>

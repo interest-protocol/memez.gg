@@ -4,6 +4,7 @@ export { default as DiscordSVG } from './discord';
 export { default as DocsSVG } from './docs';
 export { default as DodgeCoinSVG } from './dodge-coin';
 export { default as FlokiInuSVG } from './floki-inu';
+export { default as GitBookSVG } from './git-book';
 export { default as GithubSVG } from './github';
 export { default as GuideSVG } from './guide';
 export { default as IPXLogoSVG } from './ipx-logo';
