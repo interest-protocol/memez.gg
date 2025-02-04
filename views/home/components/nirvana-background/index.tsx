@@ -8,7 +8,6 @@ const NirvanaBackground: FC = () => {
       left="0"
       right="0"
       top="9rem"
-      zIndex="1"
       position="fixed"
       justifyContent="center"
       display={['none', 'none', 'none', 'inline-flex', 'inline-flex']}

@@ -41,16 +41,14 @@ const LaunchButton: FC<LaunchButtonProps> = ({
           }}
         >
           <P>{!isCommingSoon ? 'Launch App' : 'Comming soon'}</P>
-          {!isCommingSoon && (
-            <Div mb="-0.3rem">
-              <SparklessSVG
-                width={iconSize ?? '1.5rem'}
-                maxWidth={iconSize ?? '1.5rem'}
-                maxHeight={iconSize ?? '1.5rem'}
-                {...(disabled && { fill: '#ffffff69' })}
-              />
-            </Div>
-          )}
+          <Div mb="-0.3rem">
+            <SparklessSVG
+              width={iconSize ?? '1.5rem'}
+              maxWidth={iconSize ?? '1.5rem'}
+              maxHeight={iconSize ?? '1.5rem'}
+              {...(disabled && { fill: '#ffffff69' })}
+            />
+          </Div>
         </Button>
       </Link>
     </Div>

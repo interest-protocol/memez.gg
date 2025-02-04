@@ -37,6 +37,9 @@ const LaunchApp: FC = () => {
             repeat: Infinity,
             repeatType: 'loop',
           }}
+          nHover={{
+            background: 'linear-gradient(0deg, #F5B72280, #0000)',
+          }}
         />
         <Link href={'https://coins.memez.gg/'}>
           <Button
@@ -47,11 +50,14 @@ const LaunchApp: FC = () => {
             bg="#1F1F1F"
             height="3rem"
             display="flex"
+            color="#fff"
             cursor="pointer"
             alignItems="center"
             position="relative"
             borderRadius="2rem"
-            color="#fff"
+            nHover={{
+              opacity: 0.8,
+            }}
           >
             Launch App
           </Button>

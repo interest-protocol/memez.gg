@@ -44,7 +44,7 @@ const Home: FC = () => (
           flexDirection={['column', 'column', 'column', 'row', 'row']}
         >
           {CARDS.map((item) => (
-            <LaunchAppCard {...item} key={unikey()} />
+            <LaunchAppCard isCommingSoon {...item} key={unikey()} />
           ))}
         </Div>
       </Div>
