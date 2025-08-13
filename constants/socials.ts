@@ -23,7 +23,7 @@ export const SOCIAL: SocialProps[] = [
   {
     title: 'Discord',
     Icon: DiscordSVG,
-    link: 'https://discord.com/invite/interestprotocol',
+    link: 'https://discord.com/invite/interestlabs',
   },
   {
     title: 'Github',
